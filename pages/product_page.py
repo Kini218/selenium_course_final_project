@@ -18,3 +18,11 @@ class ProductPage(BasePage):
 
     def title_in_added_to_basket_message_should_be_equal_product_title(self):
         assert self.browser.find_element(*ProductPageLocators.BASKET_NOTIFICATION).text == self.browser.find_element(*ProductPageLocators.BOOK_TITLE).text, "Titles are different"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+       "Success message is presented, but should not be"
+        
+    def success_message_should_not_disappeared(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+       "Success message is disappeared, but should not"
