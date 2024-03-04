@@ -14,3 +14,4 @@ class ProductPageLocators():
     PRICE_NOTIFICATION = (By.CSS_SELECTOR, ".alert.alert-safe.alert-noicon.alert-info.fade.in .alertinner strong")
     BOOK_PRICE = (By.CSS_SELECTOR, ".col-sm-6.product_main .price_color")
     BOOK_TITLE = (By.CSS_SELECTOR, ".col-sm-6.product_main h1")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages div:nth-child(1)")
